@@ -1,0 +1,13 @@
+                                          
+                                          =Yapılacaklar Hakkında Bilgilendirme=
+
+
+
+  Öncelikli olarak ana siteyi tasarlamayı, sonradan da bu ana siteye login olmamızı sağlayacak olan bir login sistemi tasarlamayı planlamaktayım.
+
+  Login sistemi genel olarak kullanıcıdan input alacak ve bu input eğer ki istenilen veriler ile eşleşiyorsa bizi x sitesine yönlendirecek, 
+burada hoş geldiniz dedikten bir süre sonra ana siteye yönlendirecek şeklinde çalışmasını planlıyorum.
+
+  Ana sitenin tasarımında daha tam karar kılmamış olsam da temel olarak tablolardan yararlanarak güzel bir tasarım yapma planım var. 
+Ana sayfa İletişim, Hakkımda ve Şehrim şeklinde ana 3 parçadan oluşacak. Hakkımda ‘nın içerisinde ve Şehrim ‘in içerisinde kendine ait bölümleri olacak. 
+Hakkımda ‘nın içerisinde eğitim bilgilerim, ilgi alanlarım gibi alt bölümleri olacak. Şehrim ‘in içerisinde mirasımız, gezilecek yerler vb. bölümleri olacak.
