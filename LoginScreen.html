@@ -22,8 +22,7 @@
                     {   
                         if (kullaniciSifre == "g211210050")
                         {
-                           document.getElementById("debug").innerHTML = "Doğru girdin ^w^!";
-                            AnaSiteyeGonder();
+                            KarsilamayaGonder();
                         }
                         else
                         {
@@ -45,24 +44,21 @@
                         if (!document.getElementById("hata").classList.contains("opacity-75"))
                             {document.getElementById("hata").classList.add("opacity-75");}
                 }
-                
             }
 
-            function AnaSiteyeGonder(){
-                
+            function KarsilamayaGonder(){
+                window.location.replace("Karsilama.html");
             }
 
         </script>
     </head>
+
+
     <body background="LoginBackground.png">
         <div class="alert alert-danger rounded border border-2 border-danger opacity-0" style="font-size: x-large;" id="hata">
         </div>
         <br><br>
-    
-        <p id="debug"> </p>
 
-        
-        
         <div class="container-sm p-5 my-5 border border-5 border-light rounded img-fluid shadow-lg"  style="font-size: x-large; background-image: url('LoginBackground2.png'); " >
             <br><br>
             <div class="row">
@@ -82,11 +78,8 @@
                     <button type="button" onclick="Kontrol()" style="font-size: x-large;" class="btn shadow btn-primary btn-lg btn-outline-success text-black-50 fw-bold" id="oturum" name="oturum">Oturum Aç</button>
                 </div>
             </div>
- 
-
             <br><br>
         </div>
-
         <br><br><br><br>
     </body>
 </html>
