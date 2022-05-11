@@ -4,28 +4,89 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <title>My Website</title>
+     
+        <title>Giriş</title>
+
+        <script>
+            var kullaniciAdi;
+            var kullaniciSifre;
+            var dogru = true;
+
+            function Kontrol() {
+                kullaniciAdi = document.getElementById("kullaniciAd").value;
+                kullaniciSifre = document.getElementById("sifre").value;
+                
+                if (kullaniciAdi.includes("@sakarya.edu.tr") || kullaniciAdi.includes("@gmail.com") || kullaniciAdi.includes("@hotmail.com"))
+                {
+                    if (kullaniciAdi == "g211210050@sakarya.edu.tr") 
+                    {   
+                        if (kullaniciSifre == "g211210050")
+                        {
+                           document.getElementById("debug").innerHTML = "Doğru girdin ^w^!";
+                            AnaSiteyeGonder();
+                        }
+                        else
+                        {
+                            document.getElementById("hata").innerHTML ="  <strong>Dikkat!</strong> Şifrenizi yanlış girdiniz.";
+                            if (!document.getElementById("hata").classList.contains("opacity-75"))
+                                {document.getElementById("hata").classList.add("opacity-75");}
+                        }
+                    }
+                    else
+                    {
+                        document.getElementById("hata").innerHTML =" <strong>Dikkat!</strong> Böyle bir kullanıcı bulunmamaktadır.";
+                        if (!document.getElementById("hata").classList.contains("opacity-75"))
+                            {document.getElementById("hata").classList.add("opacity-75");}
+                    }
+                }
+                else
+                {
+                    document.getElementById("hata").innerHTML =" <strong>Dikkat!</strong> Geçerli bir email giriniz.";
+                        if (!document.getElementById("hata").classList.contains("opacity-75"))
+                            {document.getElementById("hata").classList.add("opacity-75");}
+                }
+                
+            }
+
+            function AnaSiteyeGonder(){
+                
+            }
+
+        </script>
     </head>
-    <body>
-
-        
-        <table border="4" width="500" height="200">
-            <tr>
-                <th><label for="kullaniciAd">Kullanıcı adı :</label></th>
-                <td><input type="text" name="kullaniciAd" id="kullaniciAd" placeholder="Kullanıcı adınız..." required></td>
-            </tr>
-            <tr>
-                <th><label for="sifre">Şifre :</label></th>
-                <td><input type="password" name="sifre" id="sifre" required autocomplete="off" placeholder="*****"></td> <!-- required, bu alanın doldurulmasını zorunlu kılar -->
-            </tr>
-            <tr>
-                <th><input type="reset" name="reset" value="Formu sıfırla" ></th>
-                <th><input type="submit" name="Gonder" value="Formu Gönder"></th><!-- Submit tipinde, yazılan değerleri göndermeye yarar. -->
-            </tr>
-        </table>
-        
+    <body background="LoginBackground.png">
+        <div class="alert alert-danger rounded border border-2 border-danger opacity-0" style="font-size: x-large;" id="hata">
+        </div>
+        <br><br>
     
+        <p id="debug"> </p>
 
+        
+        
+        <div class="container-sm p-5 my-5 border border-5 border-light rounded img-fluid shadow-lg"  style="font-size: x-large; background-image: url('LoginBackground2.png'); " >
+            <br><br>
+            <div class="row">
+                <div class="col" style="text-align: center;">
+                    <input class="rounded" type="text" name="kullaniciAd" id="kullaniciAd" placeholder="Kullanıcı e-mailiniz...">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col" style="text-align: center; ">
+                    <input class="rounded" type="password" name="sifre" id="sifre" placeholder="********">
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col" style="text-align: center;">
+                    <button type="button" onclick="Kontrol()" style="font-size: x-large;" class="btn shadow btn-primary btn-lg btn-outline-success text-black-50 fw-bold" id="oturum" name="oturum">Oturum Aç</button>
+                </div>
+            </div>
+ 
 
+            <br><br>
+        </div>
+
+        <br><br><br><br>
     </body>
 </html>
