@@ -1,5 +1,6 @@
 img {border:4px solid #624515; position:relative; top:20px;}
-h1 {color: #75521a; text-decoration: underline;font-family: Arial;}
+h1 {color: #75521a; text-decoration: underline;font-family: Arial; font-weight: bold;}
+h3 {color: #198c22; text-decoration: underline;font-family: Arial; font-weight: bold;}
 p.add {font-size:10pt; color: #645f4d;}
 p {font-family: Arial;  font-size:15pt; color:#462e00; }
 body {text-align:center;}
