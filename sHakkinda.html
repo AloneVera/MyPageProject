@@ -1,0 +1,55 @@
+<html>
+	<head>
+        <link href="Main.css" type="text/css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Main Page</title>
+		<meta charset="UTF-8">
+
+        <script>
+            var kacinciResim = 1; 
+            function changeImg() {
+                if (kacinciResim == 1) {
+                    document.getElementById("resim").src = "uludag1.jpg";
+                    document.getElementById("resimLink").href = "https://tr.wikipedia.org/wiki/Uludağ";
+                    kacinciResim = 2;
+                }
+                else if (kacinciResim == 2) {
+                    document.getElementById("resim").src = "ulucami1.jpg";
+                    document.getElementById("resimLink").href = "https://www.kulturportali.gov.tr/turkiye/bursa/gezilecekyer/bursa-ulu-cami";
+                    kacinciResim = 3;
+                }
+                else{
+                    document.getElementById("resim").src = "osmangazi1.jpg";
+                    document.getElementById("resimLink").href = "https://www.kulturportali.gov.tr/turkiye/bursa/gezilecekyer/osmangazi-turbesi";
+                    kacinciResim = 1;
+                }
+            }
+        </script>
+	</head>
+	
+	<body background="cimen2.png" >
+        <img src="bursa1.jpg" height=30% title="Bursa">
+		<br><br>
+        <h1>=Bursa=</h1>
+        <p><b>-</b> 3.147.818 Kişilik bir nüfusa sahiptir. En kalabalık olan ilçesi Osmangazi, en az kalabalık ilçesi ise Harmancık ilçesidir.</p><br>
+        <h3>=Gezilecek Yerler=</h3>
+        <p><b>-</b> Ulu Camii</p>
+        <p><b>-</b> Yeşil Camii ve Yeşil Türbe</p>
+        <p><b>-</b> Osman Gazi Türbesi</p>
+        <p><b>-</b> Orhan Gazi Türbesi</p>
+        <p><b>-</b> Muradiye Külliyesi</p>  
+        <br><br>
+        <img src="bursa2.jpg" height=30% title="Bursa">
+        <br><br><br>
+        <p><b>-</b>Bursa Hanlar Bölgesi</p>
+        <p><b>-</b>Bursa Kalesi</p>
+        <p><b>-</b>Tophane Saat Kulesi</p>
+        <p><b>-</b>Uludağ</p>
+        <br><br><br>
+        
+        <a href="https://www.kulturportali.gov.tr/turkiye/bursa/gezilecekyer/osmangazi-turbesi" target="_blank" id="resimLink"><img src="osmangazi1.jpg" id="resim" width="300" height="200"></a>
+        <br><br>
+        <button type="button" onclick="changeImg()" >Sonraki Resim</button>
+
+	</body>
+</html>
