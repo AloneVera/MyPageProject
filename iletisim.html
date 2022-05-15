@@ -4,9 +4,96 @@
 
 		<title>Main Page</title>
 		<meta charset="UTF-8">
+
+		<script>
+			function hasNumber(myString) {
+  				return /\d/.test(myString);
+			}
+
+			function containsSpecialChars(str) {
+  				const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+				return specialChars.test(str);
+			}
+
+			function FormGecerliMi()
+			{
+				let ad = document.forms["iletisim"]["ad"].value.trim();
+				let soyad = document.forms["iletisim"]["soyad"].value.trim();
+				let mail = document.forms["iletisim"]["mail"].value.trim();
+				let adres = document.forms["iletisim"]["adres"].value.trim();
+				let birthday = document.forms["iletisim"]["birthday"].value.trim();
+				let sifre = document.forms["iletisim"]["sifre"].value;
+				
+
+				if (ad == "" || soyad == "" || mail == "" || adres == "" || birthday == "" || sifre == "") {
+					alert("Hiçbir yeri boş bırakmayınız!");
+    				return false;
+				}
+				if(hasNumber(ad) || hasNumber(soyad) || containsSpecialChars(ad) || containsSpecialChars(soyad)){
+					alert("Lütfen adınızı ve soyadınızı doğru giriniz!")
+					return false;
+				}
+				if(!(mail.includes("@sakarya.edu.tr") || mail.includes("@gmail.com") || mail.includes("@hotmail.com") || mail.includes("@ogr.sakarya.edu.tr"))){
+					alert("Lütfen geçerli bir e-mail giriniz!")
+					return false;
+				}
+			}
+		</script>
 	</head>
 	
 	<body background="cimen2.png" >
-     
+		<br><br><br>
+		<form name="iletisim" action="FormData.php" method="post" onsubmit="return FormGecerliMi()">
+			<table border="3" width=60% height=60% class="center">
+				<tr>
+					<th><label for="ad"> Adınız                 :</label></th>
+					<td><input type="text" name="ad" id="ad" placeholder="Ad giriniz..." autofocus maxlength="20"></td>  
+				</tr>
+				<tr>
+					<th><label for="soyad">Soyadı                :</label></th>
+					<td><input type="text" name="soyad" id="soyad" placeholder="Soyadınızı giriniz..."  maxlength="20"></td>
+				</tr>
+				<tr>
+					<th><label for="soyad">Mailiniz               :</label></th>
+					<td><input type="text" name="mail" id="mail" placeholder="@test.com..."  maxlength="20"></td>
+				</tr>
+				<tr>
+					<th>Cinsiyet :</th>
+					<td><label for="erkek"><input type="radio" name="cinsiyet" value="1" id="erkek" checked>Erkek </label> 
+						<label for="kadin"><input type="radio" name="cinsiyet" value="2" id="kadin">Kadın </label></td>
+				</tr>
+				<tr>
+					<th>Şehir :</th>
+					<td><select name="Sehirler" id="Sehirler">
+						<option value="Sakarya" selected>Sakarya</option>
+						<option value="Bursa">Bursa</option>
+						<option value="İstanbul">İstanbul</option>
+						<option value="İzmir">İzmir</option>
+					</select></td>
+				</tr>
+				<tr>
+					<th>Programlama Dilleri :</th>
+					<td><label for="C#"><input type="checkbox" name="progDil[]" value="0" id="C#">C# </label>
+						<label for="PHP"><input type="checkbox" name="progDil[]" value="1" id="PHP">PHP </label>
+						<label for="Java"><input type="checkbox" name="progDil[]" value="2" id="Java">Java </label></td>
+				</tr>
+				<tr>
+					<th height="75"><label for="adres">Adres :</label></th>
+					<td><textarea name="adres" id="adres" cols="30" rows="5" placeholder="Adres yazınız..."></textarea></td>
+				</tr>
+				<tr>
+					<th><label for="birthday">Doğum günü :</label></th>
+					<td><input type="date" id="birthday" name="birthday"></td>
+				</tr>
+				<tr>
+					<th><label for="sifre">Şifrenizi giriniz :</label></th>
+					<td><input type="password" id="sifre" name="sifre" placeholder="********"></td>
+				</tr>
+				<tr>
+					<th><input type="reset" name="reset" class="button" value="Formu sıfırla" ></th>
+					<th><input type="submit" name="Gonder" class="button" value="Formu Gönder"></th>
+				</tr>
+			</table>
+		</form>
     </body>
 </html>

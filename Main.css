@@ -1,7 +1,22 @@
-img {border:4px solid #624515; position:relative; top:20px;}
-h1 {color: #75521a; text-decoration: underline;font-family: Arial; font-weight: bold;}
-h3 {color: #198c22; text-decoration: underline;font-family: Arial; font-weight: bold; font-size: x-large;}
+img {border:5px ridge #add0e3; position:relative; top:20px;}
+table{border:4px solid #624515; position:relative; top:20%;}
+th{border:2px solid #624515;}
+td{border:2px solid #624515;}
+h1 {color: #0b425c; text-decoration: underline;font-family: Arial; font-weight: bold;}
+h3 {color: #0e6492; text-decoration: underline;font-family: Arial; font-weight: bold; font-size: x-large;}
 p.add {font-size:10pt; color: #645f4d;}
 p {font-family: Arial;  font-size:15pt; color:#462e00; }
 body {text-align:center;}
 button {color:#75521a ; border-radius: 7px; width: fit-content; height: fit-content; font-size: x-large;}
+input{font-size:large ; border:2px solid ;border-radius: 7px;}
+.button{background-color: #796100;}
+.center {font-size: larger; margin-left: auto;margin-right: auto; margin-top: auto; margin-bottom: auto; color:#1a1100;}
+tr:nth-child(even) {background-color: #bbaa69d2;}
+tr:nth-child(odd) {background-color: #ccb86edf;}
+
+
+
+
+
+
+
